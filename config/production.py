@@ -1,16 +1,9 @@
 from config.default import *
 from logging.config import dictConfig
 
-from dotenv import load_dotenv
-
-load_dotenv(os.path.join(BASE_DIR, '.env'))
-
-SQLALCHEMY_DATABASE_URI = 'postgresql://{user}:{pw}@{url}/{db}'.format(
-    user=os.getenv('DB_USER'),
-    pw=os.getenv('DB_PASSWORD'),
-    url=os.getenv('DB_HOST'),
-    db=os.getenv('DB_NAME'))
-
+SQLALCHEMY_DATABASE_URI = "sqlite:///{}".format(
+    os.path.join(BASE_DIR, 'pybo.db')
+)
 
 SQLALCHEMY_TRACK_MODIFICATION=False
 
