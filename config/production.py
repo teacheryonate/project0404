@@ -2,11 +2,11 @@ from config.default import *
 from logging.config import dictConfig
 
 
+SQLALCHEMY_DATABASE_URI = "mysql+pymysql://test:1@localhost:3306/flask_db"
 
-
-SQLALCHEMY_DATABASE_URI = "sqlite:///{}".format(
-    os.path.join(BASE_DIR, 'pybo.db')
-)
+# SQLALCHEMY_DATABASE_URI = "sqlite:///{}".format(
+#     os.path.join(BASE_DIR, 'pybo.db')
+# )
 
 
 
