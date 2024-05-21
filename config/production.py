@@ -1,9 +1,14 @@
 from config.default import *
 from logging.config import dictConfig
 
-SQLALCHEMY_DATABASE_URI = "sqlite:///{}".format(
-    os.path.join(BASE_DIR, 'pybo.db')
-)
+SQLALCHEMY_DATABASE_URI = "mysql+pymysql://test1000:1@localhost:3306/test1000?serverTimezone=Asia/Seoul"
+
+
+# SQLALCHEMY_DATABASE_URI = "sqlite:///{}".format(
+#     os.path.join(BASE_DIR, 'pybo.db')
+# )
+
+
 
 SQLALCHEMY_TRACK_MODIFICATION=False
 
